@@ -6,173 +6,225 @@
     <title>BM Academy</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
 <body>
     <header>
-        <div class="header-top">
-            <img src="D:\ACA\images\bmlogo.png" alt="BM Academy Logo" class="logo" />
-            <div class="header-title">WELCOME TO BM ACADEMY</div>
-            <div class="header-login">
-                <button type="button" onclick="scrollToSection('login')" class="btn">Login</button>
-            </div>
+        <div class="header-container">
+            <img src="D:\demos\bmlogo.png" alt="BM Academy Logo" class="logo" />
+            <nav class="header-nav">
+                <div class="dropdown">
+                    <button class="btn">COURSES</button>
+                    <div class="dropdown-content">
+                        <div class="dropdown-scroll">
+                            <a href="#software-development">Software Development</a>
+                            <a href="#database">Database</a>
+                            <a href="#web-development">Web Development</a>
+                            <a href="#digital-marketing">Digital Marketing</a>
+                            <a href="#cloud-computing">Cloud Computing</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="btn">TRAINING AND PLACEMENT</button>
+                    <div class="dropdown-content">
+                        <div class="dropdown-scroll">
+                            <a href="#live-software-development">Live Software Development</a>
+                            <a href="#live-database">Live Database</a>
+                            <a href="#live-web-development">Live Web Development</a>
+                            <a href="#live-digital-marketing">Live Digital Marketing</a>
+                            <a href="#live-cloud-computing">Live Cloud Computing</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="btn">FOR BUSINESS</button>
+                    <div class="dropdown-content">
+                        <div class="dropdown-scroll">
+                            <a href="#resources-software-development">Software Development Resources</a>
+                            <a href="#resources-database">Database Resources</a>
+                            <a href="#resources-web-development">Web Development Resources</a>
+                            <a href="#resources-digital-marketing">Digital Marketing Resources</a>
+                            <a href="#resources-cloud-computing">Cloud Computing Resources</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="btn">RESOURCES</button>
+                    <div class="dropdown-content">
+                        <div class="dropdown-scroll">
+                            <a href="#resources-software-development">Software Development Resources</a>
+                            <a href="#resources-database">Database Resources</a>
+                            <a href="#resources-web-development">Web Development Resources</a>
+                            <a href="#resources-digital-marketing">Digital Marketing Resources</a>
+                            <a href="#resources-cloud-computing">Cloud Computing Resources</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="btn">CONTACT US</button>
+                    <div class="dropdown-content">
+                        <div class="dropdown-scroll">
+                            <a href="#resources-software-development">Email: bmacademypondy@gmail.com</a>
+                            <a href="#resources-database">Phone: +91 8220969669</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
         </div>
-        <nav class="header-nav">
-            <div class="dropdown">
-                <button class="btn">Explore Courses</button>
-                <div class="dropdown-content">
-                    <a href="#software-development">Software Development</a>
-                    <a href="#database">Database</a>
-                    <a href="#web-development">Web Development</a>
-                    <a href="#digital-marketing">Digital Marketing</a>
-                    <a href="#cloud-computing">Cloud Computing</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <button class="btn">LIVE CLASSES</button>
-                <div class="dropdown-content">
-                    <a href="#live-software-development">Live Software Development</a>
-                    <a href="#live-database">Live Database</a>
-                    <a href="#live-web-development">Live Web Development</a>
-                    <a href="#live-digital-marketing">Live Digital Marketing</a>
-                    <a href="#live-cloud-computing">Live Cloud Computing</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <button class="btn">RESOURCES</button>
-                <div class="dropdown-content">
-                    <a href="#resources-software-development">Software Development Resources</a>
-                    <a href="#resources-database">Database Resources</a>
-                    <a href="#resources-web-development">Web Development Resources</a>
-                    <a href="#resources-digital-marketing">Digital Marketing Resources</a>
-                    <a href="#resources-cloud-computing">Cloud Computing Resources</a>
-                </div>
-            </div>
-        </nav>
     </header>
-
-    <section class="hero">
-        <h1>Your Path to Learning</h1>
-        <p>Join our courses to enhance your skills and advance your career!</p>
-    </section>
-
+    
     <section class="slideshow-container">
-        <div class="slide fade">
-            <img src="D:\bm aca\IMAGES\cc.jpg" alt="Slide 1">
-            <div class="text">Discover Cloud Computing</div>
+        <div class="slide active">
+            <img src="D:\demos\SLIDE IMAGE\business-executives-using-laptop.jpg" alt="Slide 1">
+            <div class="text">WELCOME TO BM ACADEMY</div>
         </div>
-        <div class="slide fade">
-            <img src="D:\bm aca\IMAGES\dbs.jpg" alt="Slide 2">
+        <div class="slide active">
+            <img src="D:\demos\SLIDE IMAGE\letter-envelop-message-notification-concept.jpg" alt="Slide 2">
             <div class="text">Master Database Management</div>
         </div>
-        <div class="slide fade">
-            <img src="D:\bm aca\IMAGES\dm.jpg" alt="Slide 3">
+        <div class="slide active">
+            <img src="D:\demos\SLIDE IMAGE\male-business-executive-using-virtual-reality-headset.jpg" alt="Slide 3">
             <div class="text">Elevate Your Digital Marketing Skills</div>
         </div>
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <div class="slide active">
+            <img src="D:\demos\SLIDE IMAGE\technology-e-learning-school-break-lunch-concept.jpg" alt="Slide 4">
+            <div class="text">Discover Cloud Computing</div>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)" style="left: 10px;">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)" style="right: 10px;">&#10095;</a>
     </section>
-
     <main>
         <h1>Available Courses</h1>
-        <div class="course-carousel">
-            <button class="prev" onclick="moveCarousel(-1)">&#10094;</button>
-            <section id="courses" class="course-list">
+        <div class="course-buttons">
+            <button class="course-btn" onclick="showCourseSlides('software-development')">Software Development</button>
+            <button class="course-btn" onclick="showCourseSlides('database')">Database</button>
+            <button class="course-btn" onclick="showCourseSlides('web-development')">Web Development</button>
+            <button class="course-btn" onclick="showCourseSlides('digital-marketing')">Digital Marketing</button>
+            <button class="course-btn" onclick="showCourseSlides('cloud-computing')">Cloud Computing</button>
+        </div>
+    
+        <div id="course-slides" class="course-slideshow-container">
+            <div id="software-development" class="course-slides fade">
                 <div class="course">
                     <h2>SOFTWARE DEVELOPMENT</h2>
-                    <img src="images/image1.jpg" alt="Software Development">
+                    <img src="D:\demos\WEB IMAGE\Software Developer.webp" alt="Software Development">
                     <p>Languages: C, C++, Python, Java, .NET, PHP</p>
                     <p class="description">Dive deep into programming with our comprehensive curriculum.</p>
                     <button type="button" onclick="enroll('Software Development')" class="btn">Enroll Now</button>
                 </div>
+            </div>
+            <div id="database" class="course-slides fade">
                 <div class="course">
                     <h2>DATABASE</h2>
-                    <img src="images/dbs.jpg" alt="Database">
+                    <img src="D:\demos\WEB IMAGE\DataBase.webp" alt="Database">
                     <p>Technologies: Oracle, MongoDB, SQL Server</p>
                     <p class="description">Learn how to manage and analyze data effectively.</p>
                     <button type="button" onclick="enroll('Database')" class="btn">Enroll Now</button>
                 </div>
+            </div>
+            <div id="web-development" class="course-slides fade">
                 <div class="course">
                     <h2>WEB DEVELOPMENT</h2>
-                    <img src="images/image2.jpg" alt="Web Development">
+                    <img src="D:\demos\WEB IMAGE\Web Developer.webp" alt="Web Development">
                     <p>Technologies: HTML, CSS, JavaScript, React</p>
                     <p class="description">Build stunning websites and web applications.</p>
                     <button type="button" onclick="enroll('Web Development')" class="btn">Enroll Now</button>
                 </div>
+            </div>
+            <div id="digital-marketing" class="course-slides fade">
                 <div class="course">
                     <h2>DIGITAL MARKETING</h2>
-                    <img src="images/dm.jpg" alt="Digital Marketing">
+                    <img src="D:\demos\WEB IMAGE\Digital marketing.webp" alt="Digital Marketing">
                     <p>Techniques: SEO, SEM, SMM, Content Marketing</p>
                     <p class="description">Master the art of online marketing.</p>
                     <button type="button" onclick="enroll('Digital Marketing')" class="btn">Enroll Now</button>
                 </div>
+            </div>
+            <div id="cloud-computing" class="course-slides fade">
                 <div class="course">
                     <h2>CLOUD COMPUTING</h2>
-                    <img src="images/cc.jpg" alt="Cloud Computing">
+                    <img src="D:\demos\WEB IMAGE\CLOUD.webp" alt="Cloud Computing">
                     <p>Platforms: AWS, Azure, Google Cloud</p>
                     <p class="description">Understand cloud technologies and services.</p>
                     <button type="button" onclick="enroll('Cloud Computing')" class="btn">Enroll Now</button>
                 </div>
-            </section>
-            <button class="next" onclick="moveCarousel(1)">&#10095;</button>
+            </div>
+    
+            <a class="prev" onclick="plusCourseSlides(-1)" style="left: 10px;">&#10094;</a>
+            <a class="next" onclick="plusCourseSlides(1)" style="right: 10px;">&#10095;</a>
         </div>
     </main>
+    
+    <section class="new-slideshow-container">
+        <div class="new-slide fade">
+            <img src="D:\demos\ac1.jpg" alt="Award 1">
+            <div class="new-text">Best Online Learning Platform 2024</div>
+        </div>
+        <div class="new-slide fade">
+            <img src="D:\demos\ac2.jpg" alt="Award 2">
+            <div class="new-text">Excellence in Education Award 2024</div>
+        </div>
+        <div class="new-slide fade">
+            <img src="D:\demos\ac3.jpg" alt="Award 3">
+            <div class="new-text">Top Instructor Award 2024</div>
+        </div>
+    </section>
     <section class="info-section">
-        <img src="D:\demos\i1.jpg" alt="Informative Image" class="info-image">
+        <div class="info-container">
+        <img src="D:\demos\1.png" alt="Informative Image" class="info-image">
         <div class="info-text">
             <h2>Enhance Your Skills with BM Academy</h2>
             <p>
                 At BM Academy, we provide a diverse range of courses tailored to meet the needs of learners at all levels. Our expert instructors guide you through the latest technologies and methodologies, ensuring you gain practical knowledge and skills. Join us to boost your career and stay ahead in the fast-paced world of technology!
             </p>
         </div>
+    </div>
     </section>
+
     <section class="what-we-do">
         <div class="folders">
             <div class="folder">
-                <img src="D:\bm aca\IMAGES\cc.jpg" alt="Folder 1" class="folder-icon">
+                <img src="D:\demos\What we do\online courses PNG -01.png" alt="Folder 1" class="folder-icon">
                 <h3>Online Courses</h3>
                 <p>Access a wide range of courses from anywhere, at any time.</p>
             </div>
             <div class="folder">
-                <img src="D:\bm aca\IMAGES\dbs.jpg" alt="Folder 2" class="folder-icon">
+                <img src="D:\demos\What we do\Expect  Instructors PNG-01.png" alt="Folder 2" class="folder-icon">
                 <h3>Expert Instructors</h3>
                 <p>Learn from industry experts and gain practical knowledge.</p>
             </div>
             <div class="folder">
-                <img src="D:\bm aca\IMAGES\download.jpg" alt="Folder 3" class="folder-icon">
+                <img src="D:\demos\What we do\Certification_Gradient Star Award Ribbon.png" alt="Folder 3" class="folder-icon">
                 <h3>Certification</h3>
                 <p>Receive certificates that validate your skills and knowledge.</p>
             </div>
             <div class="folder">
-                <img src="D:\bm aca\IMAGES\dm.jpg" alt="Folder 4" class="folder-icon">
+                <img src="D:\demos\What we do\Community Support-01.png" alt="Folder 4" class="folder-icon">
                 <h3>Community Support</h3>
                 <p>Join a community of learners and get support from peers.</p>
             </div>
         </div>
-        <img src="D:\demos\i2.jpg" alt="What We Do" class="what-we-do-image">
     </section>
     <section class="reviews-slideshow">
         <h2 class="reviews-title">What Our Students Say</h2>
         <div class="reviews-container">
             <div class="review slide fade">
-                <img src="images/student1.jpg" alt="Student 1" class="review-image">
-                <p>"BM Academy transformed my career! The courses are practical and up-to-date." - Jane D.</p>
+                <img src="D:\demos\Review\Review-05.jpg" alt="Student 1" class="review-image">
             </div>
             <div class="review slide fade">
-                <img src="images/student2.jpg" alt="Student 2" class="review-image">
-                <p>"The instructors are knowledgeable and supportive. Highly recommended!" - John S.</p>
+                <img src="D:\demos\Review\Review-04.jpg" alt="Student 2" class="review-image">
             </div>
             <div class="review slide fade">
-                <img src="images/student3.jpg" alt="Student 3" class="review-image">
-                <p>"I gained hands-on experience that helped me land a job in tech!" - Emma T.</p>
+                <img src="D:\demos\Review\Review-03.jpg" alt="Student 3" class="review-image">
             </div>
             <div class="review slide fade">
-                <img src="images/student4.jpg" alt="Student 4" class="review-image">
-                <p>"The community is fantastic! I made great connections while learning." - Michael B.</p>
+                <img src="D:\demos\Review\Review-02.jpg" alt="Student 4" class="review-image">
             </div>
         </div>
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </section>
+    
     <section class="statistics">
         <h2 class="statistics-title">Our Impact</h2>
         <div class="stats-container">
@@ -194,30 +246,23 @@
         </div>
     </section>
         
-
     <footer>
         <div class="footer-container">
             <div class="footer-section">
-                <h3>Courses</h3>
-                <ul>
-                    <li><a href="#software-development">Software Development</a></li>
-                    <li><a href="#database">Database</a></li>
-                    <li><a href="#web-development">Web Development</a></li>
-                    <li><a href="#digital-marketing">Digital Marketing</a></li>
-                    <li><a href="#cloud-computing">Cloud Computing</a></li>
-                </ul>
             </div>
             <div class="footer-section">
                 <h3>Contact Us</h3>
-                <p>Email: info@bmacademy.com</p>
-                <p>Phone: +1 234 567 890</p>
+                <p>Email: bmacademypondy@gmail.com</p>
+                <p>Phone: +91 8220969669</p>
             </div>
             <div class="footer-section">
                 <h3>Follow Us</h3>
                 <ul class="social-links">
-                    <li><a href="https://www.facebook.com/BMAcademy" target="_blank">Facebook</a></li>
-                    <li><a href="https://twitter.com/BMAcademy" target="_blank">Twitter</a></li>
-                    <li><a href="https://www.instagram.com/BMAcademy" target="_blank">Instagram</a></li>
+                    <li><a href="https://www.facebook.com/profile.php?id=61566753898165" target="_blank">Facebook</a></li>
+                    <li><a href="https://www.linkedin.com/in/bm-academy-b25aba330/" target="_blank">LINKEDIN</a></li>
+                    <li><a href="https://www.instagram.com/bmacademypondy?igsh=ZTI3NG55a3FlaW04" target="_blank">Instagram</a></li>
+                    <li><a href="https://youtube.com/@bmacademypondy?si=HF9hOU5NKY5w9HgA" target="_blank">YOUTUBE</a></li>
+                    <li><a href="https://x.com/BMACADEMYPONDY" target="_blank">TWITTER</a></li>
                 </ul>
             </div>
             <div class="footer-section">
@@ -231,6 +276,11 @@
         </div>
         <p>&copy; 2024 BM Academy. All rights reserved.</p>
     </footer>
-    
 </body>
 </html>
+
+
+
+
+
+
